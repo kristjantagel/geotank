@@ -1,0 +1,7 @@
+eclipse.project.name = appName + '-shared'
+
+apply from: rootProject.file('gradle/common-java-library.gradle')
+
+dependencies {
+    implementation group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+}

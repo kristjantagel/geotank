@@ -1,0 +1,10 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+/assets/assets.txt
+META-INF/MANIFEST.MF
+out/*

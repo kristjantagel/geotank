@@ -1,0 +1,10 @@
+// Common Gradle configuration for all Java library modules
+// Contains shared dependencies and compiler settings
+
+apply plugin: 'java-library'
+
+// Common Lombok configuration used by all modules
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+}

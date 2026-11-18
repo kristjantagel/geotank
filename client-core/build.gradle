@@ -1,0 +1,18 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+apply from: rootProject.file('gradle/common-java-library.gradle')
+
+dependencies {
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+
+    api project(':shared')
+
+    if (enableGraalNative == 'true') {
+        implementation "io.github.berstanio:gdx-svmhelper-annotations:$graalHelperVersion"
+    }
+
+    implementation group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+    implementation 'org.reflections:reflections:0.10.2'
+}
